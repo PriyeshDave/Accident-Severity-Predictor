@@ -5,7 +5,7 @@ import joblib
 from sklearn.ensemble import RandomForestClassifier
 from prediction import *
 
-model = joblib.load(r'Model/finalModel_xgb')
+model = joblib.load('Model/finalModel_xgb')
 
 st.set_page_config(page_title="Accident Severity Prediction App",
                    page_icon="🚧", layout="wide")
