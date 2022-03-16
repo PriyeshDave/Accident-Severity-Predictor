@@ -33,6 +33,11 @@ This data set is collected from **Addis Ababa Sub-city Police Departments** for 
 * After retraining my model, I found that it was generalizing well with an accuracy of **84%**.
 * As per the problem statement I used **F1 Score** as the evaluation metric for my model.
 
+## Web Application: 
+Built a web application using Streamlit and deployed on Heroku.
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/81012989/158674773-a6b3f754-fd00-45c1-b2aa-3aff7a018b92.png">
+https://accident-severity-predictor.herokuapp.com/
+
 
 
 
