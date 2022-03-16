@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 from sklearn.ensemble import RandomForestClassifier
 from prediction import *
+from PIL import Image
 
 model = joblib.load('Model/finalModel_xgb.pkl')
 
@@ -80,8 +81,49 @@ features = ['Time', 'Day_of_week', 'Age_band_of_driver', 'Sex_of_driver',
        'Vehicle_movement', 'Pedestrian_movement', 'Cause_of_accident',
        ]
 
+# st.markdown(
+#     """
+# <style>
+# .reportview-container .markdown-text-container {
+#     font-family: serif;
+# }
+# .sidebar .sidebar-content {
+#     background-image: linear-gradient(#cf872e,#2e7bcf);
+#     color: white;
+# }
+# .Widget>label {
+#     color: white;
+#     font-family: serif;
+# }
+# [class^="st-b"]  {
+#     color: white;
+#     font-family: monospace;
+# }
+# .st-bb {
+#     background-color: transparent;
+# }
+# .st-at {
+#     background-color: #0c0080;
+# }
+# footer {
+#     font-family: monospace;
+# }
+# .reportview-container .main footer, .reportview-container .main footer a {
+#     color: #0c0080;
+# }
+# header .decoration {
+#     background-image: none;
+# }
 
-st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App 🚧</h1>", unsafe_allow_html=True)
+# </style>
+# """,
+#     unsafe_allow_html=True,
+# )
+st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction Application 🚧</h1>", unsafe_allow_html=True)
+
+image = Image.open('RTA1.png')
+col1, col2, col3 = st.columns([0.2, 5, 0.2])
+col2.image(image, use_column_width=True)
 def main():
     with st.form('prediction_form'):
 
@@ -89,12 +131,12 @@ def main():
         
         hour = st.slider("Pickup Hour: ", 0, 23, value=0, format="%d")
         sex = st.selectbox("Select sex of driver: ", options=options_sex)
-        driver_age = st.selectbox("Select Driver Age: ", options=options_age)
+        driver_age = st.selectbox("Select driver's age: ", options=options_age)
         educational_level = st.selectbox("Select driver's educational level: ", options=options_educational_level)
-        driving_experience = st.selectbox("Select Driving Experience: ", options=options_driver_exp)
-        day_of_week = st.selectbox("Select Day of the Week: ", options=options_day)
+        driving_experience = st.selectbox("Select driving experience: ", options=options_driver_exp)
+        day_of_week = st.selectbox("Select day of the week: ", options=options_day)
         owner_of_vehicle = st.selectbox("Select owner of vehicle: ", options=options_owner_of_vehicle)
-        accident_area = st.selectbox("Select Accident Area: ", options=options_acc_area)
+        accident_area = st.selectbox("Select accident Area: ", options=options_acc_area)
         Types_of_Junction = st.selectbox("Select type of junction: ", options=options_Types_of_Junction)
         Road_surface_type = st.selectbox("Select surface of road: ", options=options_Road_surface_type)
         Road_surface_conditions = st.selectbox("Select surface conditions: ", options=options_Road_surface_conditions)
