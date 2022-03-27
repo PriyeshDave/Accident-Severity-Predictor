@@ -13,7 +13,7 @@ based on the other 31 features.
 ## 🧾 Description: 
 This data set is collected from **Addis Ababa Sub-city Police Departments** for master's research work. The data set has been prepared from manual records of road traffic accidents of the year 2017-20. All the sensitive information has been excluded during data encoding and finally it has 32 features and 12316 instances of the accident.
 
-### :bar_chart: Exploratory Data Anaylysis:
+### :bar_chart: Exploratory Data Analysis:
 * Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge. 
 
 ### :hourglass: Data Preprocessing:
